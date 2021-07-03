@@ -5,4 +5,4 @@ Yeah it went pretty good, it uses zefoy.com.
 
 thats about it
 
-[Download](zefoyBot/releases)
+[Download](https://github.com/pelaajahacks/zefoyBot/releases)
