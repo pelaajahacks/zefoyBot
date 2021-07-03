@@ -5,4 +5,4 @@ Yeah it went pretty good, it uses zefoy.com.
 
 thats about it
 
-[Download](releases)
+[Download](zefoyBot/releases)
