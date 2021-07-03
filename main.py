@@ -9,8 +9,14 @@ from os import system, name
 import os
 from colorama import *
 import ctypes
-from updater4pyi import upd_source, upd_core
-from updater4pyi.upd_iface_pyqt4 import UpdatePyQt4Interface
+
+"""
+Sneaky Sneaky, looking at my code!
+
+            Best video ever!!
+                VVVVVVVV
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+"""
 
 os.system('mode con: cols=150 lines=50')
 ctypes.windll.kernel32.SetConsoleTitleW("Gravity TikTok Bot")
@@ -40,7 +46,11 @@ def clear():
         _ = system('cls')
 
     # for mac and linux(here, os.name is 'posix')
+    elif name == 'posix':
+        _ = system('clear')
     else:
+        print("YOU ARE FAGGOT MONKEY, HAVE A GREAT DAY")
+        _ = system('cls')
         _ = system('clear')
 
 
@@ -120,16 +130,6 @@ def check_status(status):
         print(Fore.RED, "[Not Working!]")
     else:
         print(Fore.GREEN, "[Working!]")
-
-
-def update():
-    swu_source = upd_source.UpdateGithubReleasesSource('githubusername/githubproject')
-    swu_updater = upd_core.Updater(current_version=...,
-                                   update_source=swu_source)
-    swu_interface = UpdatePyQt4Interface(swu_updater,
-                                         progname='Your Project Name',
-                                         ask_before_checking=True,
-                                         parent=QApplication.instance())
 
 
 print_title()
