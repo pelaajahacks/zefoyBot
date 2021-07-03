@@ -4,4 +4,5 @@ So i made a bot with Selenium, heres how it went (damn that sounds like a youtub
 Yeah it went pretty good, it uses zefoy.com.
 
 thats about it
-# PEACE
+
+[Download](releases)
