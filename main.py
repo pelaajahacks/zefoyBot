@@ -204,11 +204,13 @@ try:
             print(Fore.MAGENTA, "[+]Sent the things\n")
             if int(mode) == 1:
                 likes += 25
+                ctypes.windll.kernel32.SetConsoleTitleW("Gravity TikTok Bot | followers: {0}".format(str(likes)))
             if int(mode) == 3:
                 likes += 30
+                ctypes.windll.kernel32.SetConsoleTitleW("Gravity TikTok Bot | likes: {0}".format(str(likes)))
             if int(mode) == 4:
                 likes += 1000
-            ctypes.windll.kernel32.SetConsoleTitleW("Gravity TikTok Bot | likes: {0}".format(str(likes)))
+                ctypes.windll.kernel32.SetConsoleTitleW("Gravity TikTok Bot | views: {0}".format(str(likes)))
             print(Fore.MAGENTA, "[+]", str(likes), "\n")
             print(Fore.MAGENTA, "[+]Cooldown")
         except:
