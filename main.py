@@ -144,13 +144,22 @@ try:
     sleep(3)
     clear()
     print_title()
+    def get_status():
+        global followers_status, hearts_status, comments_hearts_status, views_status, shares_status
+        try:
+            followers_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/div/p/small[@class]').get_attribute('class')
+            hearts_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[2]/div/p/small[@class]').get_attribute('class')
+            comments_hearts_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[3]/div/p/small[@class]').get_attribute('class')
+            views_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[4]/div/p/small[@class]').get_attribute('class')
+            shares_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[5]/div/p/small[@class]').get_attribute('class')
+        except:
+            clear()
+            print_title()
 
-    followers_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[1]/div/p/small[@class]').get_attribute('class')
-    hearts_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[2]/div/p/small[@class]').get_attribute('class')
-    comments_hearts_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[3]/div/p/small[@class]').get_attribute('class')
-    views_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[4]/div/p/small[@class]').get_attribute('class')
-    shares_status = driver.find_element_by_xpath('//*[@id="main"]/div/div[5]/div/p/small[@class]').get_attribute('class')
-
+            print(Fore.BLUE, "[+]Captcha")
+            sleep(3)
+            get_status()
+    get_status()
 
 
     print(Fore.BLUE, "[1]Followers", end="")
@@ -198,7 +207,8 @@ try:
                 comment_likes()
             if int(mode) == 4:
                 views()
-            sleep(60)
+            for i in range(60):
+                sleep(1)
             clear()
             print_title()
             print(Fore.MAGENTA, "[+]Sent the things\n")
@@ -214,8 +224,8 @@ try:
             print(Fore.MAGENTA, "[+]", str(likes), "\n")
             print(Fore.MAGENTA, "[+]Cooldown")
         except:
-            pass
-            sleep(20)
+            for i in range(20):
+                sleep(20)
             clear()
             print_title()
             print(Fore.MAGENTA, "[+]Cooldown")
