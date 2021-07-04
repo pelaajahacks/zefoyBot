@@ -225,7 +225,7 @@ try:
             print(Fore.MAGENTA, "[+]Cooldown")
         except:
             for i in range(20):
-                sleep(20)
+                sleep(1)
             clear()
             print_title()
             print(Fore.MAGENTA, "[+]Cooldown")
