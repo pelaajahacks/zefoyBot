@@ -5,6 +5,6 @@ Yeah it went pretty good, it uses zefoy.com.
 
 thats about it
 
-(Had to delete source because it was getting stolen :/ )
+(Had to delete source because i wanna protect my code.)
 
 [Download](https://github.com/pelaajahacks/zefoyBot/releases)
