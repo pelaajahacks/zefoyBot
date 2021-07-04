@@ -9,6 +9,7 @@ from os import system, name
 import os
 from colorama import *
 import ctypes
+import undetected_chromedriver.v2 as uc
 
 """
 Sneaky Sneaky, looking at my code!
@@ -134,14 +135,15 @@ def check_status(status):
 
 print_title()
 PATH = "chromedriver.exe"
-driver = webdriver.Chrome(PATH)
-driver.get("https://zefoy.com")
+driver = uc.Chrome()
+with driver:
+    driver.get('https://zefoy.com')
 try:
     clear()
     print_title()
 
     print(Fore.BLUE, "[+]Captcha")
-    sleep(3)
+    sleep(1)
     clear()
     print_title()
     def get_status():
@@ -157,7 +159,7 @@ try:
             print_title()
 
             print(Fore.BLUE, "[+]Captcha")
-            sleep(3)
+            sleep(1)
             get_status()
     get_status()
 
@@ -189,6 +191,8 @@ try:
         comment_likes_enter_video()
     if int(mode) == 4:
         views_enter_video()
+    if int(mode) == 5:
+        shares_enter_video()
     clear()
     print_title()
     while True:
@@ -198,6 +202,8 @@ try:
             comment_likes_press_button()
         elif int(mode) == 4:
             views_press_button()
+        if int(mode) == 5:
+            shares_press_button()
         sleep(2)
 
         try:
